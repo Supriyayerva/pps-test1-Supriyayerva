@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main()
 {
-  printf("yerva supriya");
+  printf("yerva supriya\n");
   return 0;
 }
