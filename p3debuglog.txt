@@ -1,0 +1,132 @@
+gcc -g p2original.c
+p2original.c:1:1: error: unknown type name ‘Add’
+ Add two numbers using 4 functions using pass by value
+ ^~~
+p2original.c:1:9: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘numbers’
+ Add two numbers using 4 functions using pass by value
+         ^~~~~~~
+p2original.c:1:9: error: unknown type name ‘numbers’
+In file included from /usr/include/stdio.h:41:0,
+                 from p2original.c:3:
+/usr/include/x86_64-linux-gnu/bits/libio.h:306:3: error: unknown type name ‘size_t’
+   size_t __pad5;
+   ^~~~~~
+/usr/include/x86_64-linux-gnu/bits/libio.h:309:67: error: ‘size_t’ undeclared here (not in a function); did you mean ‘__size_t’?
+   char _unused2[15 * sizeof (int) - 4 * sizeof (void *) - sizeof (size_t)];
+                                                                   ^~~~~~
+                                                                   __size_t
+/usr/include/x86_64-linux-gnu/bits/libio.h:337:62: error: expected declaration specifiers or ‘...’ before ‘size_t’
+ typedef __ssize_t __io_read_fn (void *__cookie, char *__buf, size_t __nbytes);
+                                                              ^~~~~~
+/usr/include/x86_64-linux-gnu/bits/libio.h:346:6: error: expected declaration specifiers or ‘...’ before ‘size_t’
+      size_t __n);
+      ^~~~~~
+/usr/include/x86_64-linux-gnu/bits/libio.h:467:19: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘_IO_sgetn’
+ extern _IO_size_t _IO_sgetn (_IO_FILE *, void *, _IO_size_t);
+                   ^~~~~~~~~
+In file included from p2original.c:3:0:
+/usr/include/stdio.h:278:35: error: expected declaration specifiers or ‘...’ before ‘size_t’
+ extern FILE *fmemopen (void *__s, size_t __len, const char *__modes)
+                                   ^~~~~~
+/usr/include/stdio.h:284:47: error: expected declaration specifiers or ‘...’ before ‘size_t’
+ extern FILE *open_memstream (char **__bufloc, size_t *__sizeloc) __THROW __wur;
+                                               ^~~~~~
+/usr/include/stdio.h:295:20: error: expected declaration specifiers or ‘...’ before ‘size_t’
+       int __modes, size_t __n) __THROW;
+                    ^~~~~~
+/usr/include/stdio.h:301:10: error: expected declaration specifiers or ‘...’ before ‘size_t’
+          size_t __size) __THROW;
+          ^~~~~~
+/usr/include/stdio.h:340:44: error: expected declaration specifiers or ‘...’ before ‘size_t’
+ extern int snprintf (char *__restrict __s, size_t __maxlen,
+                                            ^~~~~~
+/usr/include/stdio.h:344:45: error: expected declaration specifiers or ‘.
+unable to run, main file "main.sh" not found
+ gcc -g p3original.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+unable to run, main file "main.sh" not found
+ gcc -g p3original.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+
+Program received signal SIGHUP, Hangup.
+unable to run, main file "main.sh" not found
+ gcc -g p3original.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x7fc: file p3original.c, line 18.
+(gdb) r
+Starting program: /home/runner/pps-test1-Supriyayerva/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p3original.c:18
+18   {
+(gdb) n
+20     input(&x,&y);
+(gdb) s
+input (a=0x7ffe6404e0ac, b=0x7ffe6404e0b0) at p3original.c:4
+4     printf("Enter two numbers\n");
+(gdb) n
+Enter two numbers
+5     scanf("%d%d",a,b);
+(gdb) n
+5 9
+6   }
+(gdb) n
+main () at p3original.c:21
+21     find_add(x,y,&z);
+(gdb) s
+find_add (a=5, b=9, sum=0x7ffe6404e0b4) at p3original.c:9
+9     *sum=a+b;
+(gdb) n
+10  }
+(gdb) n
+main () at p3original.c:22
+22     output(x,y,z);
+(gdb) s
+output (a=5, b=9, c=14) at p3original.c:14
+14    printf("sum of %d + %d is %d\n",a,b,c);
+(gdb) n
+sum of 5 + 9 is 14
+15  }
+(gdb) n
+main () at p3original.c:23
+23     return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 86) exited normally]
+(gdb) Quit
+(gdb) 
+
+
+
+

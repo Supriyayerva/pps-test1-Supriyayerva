@@ -1,3 +1,5 @@
+Add two numbers using 4 functions using pass by value
+ 
 #include <stdio.h>
 int input()
 {
