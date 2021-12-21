@@ -1,8 +1,9 @@
-write a program to print your name
-
 #include <stdio.h>
 int main()
 {
-  printf("yerva supriya\n");
-  return 0;
+char name[500];
+printf("enter your name\n");
+scanf(%s,name);
+printf(%s,name);
+return 0;
 }
