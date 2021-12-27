@@ -1,5 +1,3 @@
-write a program to add two numbers function
-
 #include <stdio.h>
 int main()
 {
