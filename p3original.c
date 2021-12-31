@@ -1,4 +1,6 @@
-#include <stdio.h>
+ pass by reference
+ 
+ #include <stdio.h>
 void input(int*a, int*b)
 {
   printf("Enter two numbers\n");

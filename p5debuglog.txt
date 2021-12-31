@@ -16,26 +16,27 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x802: file p5original.c, line 32.
+Breakpoint 1 at 0x722: file p5original.c, line 3.
 (gdb) r
 Starting program: /home/runner/pps-test1-Supriyayerva/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p5original.c:32
-32    a = input();
+Breakpoint 1, main () at p5original.c:3
+3   {
 (gdb) n
-Enter the number:/n 6
-33    b = input();
+5     printf("enter the value of a,b,c");
 (gdb) n
-Enter the number:/n 8
-34    c = input();
+6     scanf("%d%d%d", &a,&b,&c);
 (gdb) n
-Enter the number:/n 9
-35    large=cmp(a,b,c);
+enter the value of a,b,c   
+5
+7
+2
+7     if(a>b)
 (gdb) n
-36    output(a,b,c,large);
+11  else if (b>a && b>c)
 (gdb) n
-the largest of 6,8,9 is 9
-37    return 0;
+13    big =b;
 (gdb) n
-38  }(gdb) 
+19  printf("the biggest number = %d",big);
+(gdb) n

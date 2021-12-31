@@ -1,3 +1,5 @@
+pass by value
+
 #include <stdio.h>
 int input()
 {
