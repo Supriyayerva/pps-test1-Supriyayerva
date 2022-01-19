@@ -17,26 +17,6 @@ Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
 (gdb) b main
 Breakpoint 1 at 0x810: file p2original.c, line 22.
-(gdb) r
-Starting program: /home/runner/pps-test1-Supriyayerva/a.out 
-warning: Error disabling address space randomization: Operation not permitted
-
-Breakpoint 1, main () at p2original.c:22
-22    a=input();
-(gdb) s
-input () at p2original.c:3
-3   {
-(gdb) n
-5     printf("Enter a number\n");
-(gdb) n
-Enter a number
-6     scanf("%d",&a);
-(gdb) n
-1
-7     return a;
-(gdb) n
-8   }
-(gdb) n
 unable to run, main file "main.sh" not found
  gcc -g p2original.c
  gdb a.out
@@ -101,3 +81,4 @@ output (a=1, b=2, c=3) at p2original.c:17
 (gdb) n
 main () at p2original.c:26
 26    return 0;
+(gdb) 
