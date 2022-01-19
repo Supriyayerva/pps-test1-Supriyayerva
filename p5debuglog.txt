@@ -28,7 +28,7 @@ Breakpoint 1, main () at p5original.c:3
 (gdb) n
 6     scanf("%d%d%d", &a,&b,&c);
 (gdb) n
-enter the value of a,b,c   
+enter the value of a,b,c
 5
 7
 2
@@ -40,3 +40,5 @@ enter the value of a,b,c
 (gdb) n
 19  printf("the biggest number = %d",big);
 (gdb) n
+20  }
+(gdb) 
