@@ -3,12 +3,6 @@ gcc -g p0original.c
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-unable to run, main file "main.sh" not found
- gcc -g p0original.c
- gdb a.out
-GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
-Copyright (C) 2018 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
 and "show warranty" for details.
@@ -37,9 +31,7 @@ enter your name
 (gdb) n
 supriya
 7     printf("%s",name);
-(gdb) 
+(gdb) n
 8     return 0;
-(gdb) c
-Continuing.
-supriya[Inferior 1 (process 437) exited normally]
-(gdb)  
+(gdb) n
+9   }(gdb) n
